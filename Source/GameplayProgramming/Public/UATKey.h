@@ -14,12 +14,13 @@ UCLASS()
 class GAMEPLAYPROGRAMMING_API AUATKey : public ATriggerBox
 {
 	GENERATED_BODY()
-	AUATKey();
+
 	
 public:
+	AUATKey();
 	UPROPERTY(EditAnywhere)
 	AUATLock* lockToOpen;
-	// don't need to declare AUAT again for Ufunction
+	// don't need to declare AUAT again for Ufunctin
 	UFUNCTION()
 	void OnPickup(class AActor* OverlappedActor, class AActor* OtherActor);
 
