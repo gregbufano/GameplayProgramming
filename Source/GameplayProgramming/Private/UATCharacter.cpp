@@ -36,7 +36,7 @@ void AUATCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	PlayerInputComponent->BindAxis(TEXT("MoveFoward"), this, &AUATCharacter::MoveFoward);
 	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &AUATCharacter::MoveRight);
 	PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed, this, &AUATCharacter::DoJump);
-	PlayerInputComponent->BindAction(TEXT("Stun"), IE_Pressed, this, &AUATCharacter::DoStun);
+	//PlayerInputComponent->BindAction(TEXT("Stun"), IE_Pressed, this, &AUATCharacter::DoStun);
 }
 
 void AUATCharacter::MoveFoward(float axisValue)
