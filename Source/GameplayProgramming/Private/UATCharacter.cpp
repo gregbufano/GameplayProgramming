@@ -29,6 +29,22 @@ void AUATCharacter::Tick(float DeltaTime)
 void AUATCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
+	PlayerInputComponent->BindAxis(TEXT("MoveFoward"), this, &AUATCharacter::MoveFoward);
+	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &AUATCharacter::MoveRight);
+	PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed, this, &AUATCharacter::DoJump);
 }
 
+void AUATCharacter::MoveFoward(float axisValue)
+{
+	AddMovementInput(GetActorForwardVector(), axisValue);
+}
+
+void AUATCharacter::MoveRight(float axisValue)
+{
+	AddControllerYawInput(axisValue);
+}
+
+void AUATCharacter::DoJump()
+{
+	Jump();
+}
