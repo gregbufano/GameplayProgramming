@@ -14,6 +14,7 @@ class GAMEPLAYPROGRAMMING_API AUATPickup : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AUATPickup();
+	void OnPickedUp();
 
 protected:
 	// Called when the game starts or when spawned

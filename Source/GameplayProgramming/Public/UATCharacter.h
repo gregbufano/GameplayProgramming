@@ -14,7 +14,7 @@ class GAMEPLAYPROGRAMMING_API AUATCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AUATCharacter();
-
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
