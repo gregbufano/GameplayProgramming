@@ -28,4 +28,5 @@ protected:
 	void DoJump();
 	void MoveFoward(float axisValue);
 	void MoveRight(float axisValue);
+	//void DoStun();
 };

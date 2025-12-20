@@ -36,6 +36,7 @@ void AUATCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	PlayerInputComponent->BindAxis(TEXT("MoveFoward"), this, &AUATCharacter::MoveFoward);
 	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &AUATCharacter::MoveRight);
 	PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed, this, &AUATCharacter::DoJump);
+	PlayerInputComponent->BindAction(TEXT("Stun"), IE_Pressed, this, &AUATCharacter::DoStun);
 }
 
 void AUATCharacter::MoveFoward(float axisValue)
@@ -47,6 +48,15 @@ void AUATCharacter::MoveRight(float axisValue)
 {
 	AddControllerYawInput(axisValue);
 }
+/*
+void AUATCharacter::DoStun()
+{
+	// Get all the UATCharacters within a radius of this character 
+	// call their stun event on those characters - that event will seat an "isStunned" on their blackboard and set a timer
+	// isStunned is their first decision option, so they always do it first
+	// when the timer ends, it will set isStunned back to false
+
+}*/
 
 void AUATCharacter::DoJump()
 {
