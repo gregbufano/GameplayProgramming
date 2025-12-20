@@ -25,3 +25,13 @@ void AUATPickup::Tick(float DeltaTime)
 
 }
 
+
+void AUATPickup::OnPickedUp_Implementation(AActor* PickingUpActor)
+{
+	if (!PickingUpActor->IsA(APawn::StaticClass()))
+	{
+		return;
+	}
+	// Default implementation does nothing
+}
+

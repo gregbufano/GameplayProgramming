@@ -14,12 +14,16 @@ class GAMEPLAYPROGRAMMING_API AUATPickup : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AUATPickup();
-	void OnPickedUp();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	
+
+	UFUNCTION(BlueprintNativeEvent, Category = "Pickup")
+	void OnPickedUp(AActor* PickingUpActor);
+	virtual void OnPickedUp_Implementation(AActor* PickingUpActor);
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

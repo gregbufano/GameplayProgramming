@@ -14,4 +14,8 @@ class GAMEPLAYPROGRAMMING_API AUATHealthPickup : public AUATPickup
 {
 	GENERATED_BODY()
 	
+protected:
+	UPROPERTY(EditAnywhere, Category = "Pickup")
+	float HealthAmount = 25.0f;
+	virtual void OnPickedUp_Implementation(AActor* PickingUpActor) override;
 };
